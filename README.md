@@ -1,4 +1,4 @@
-# Multi-Image-Uploader-Success-Community
+# Multi Image Uploader for Success Community
 
 Extension that lets you upload multiple files while answering on the Salesforce Success Community
 
