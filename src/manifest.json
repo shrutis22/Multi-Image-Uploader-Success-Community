@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Multi Image Uploader for Success Community",
+  "version": "1.0.1",
+
+  "description": "This extension allows to upload more than one image at a time while answering on the Success Coummunity.",
+  "icons": { 
+    "16": "assets/img/icon16.png",
+    "48": "assets/img/icon48.png",
+    "128": "assets/img/icon128.png" 
+  },
+
+  "author": "Shruti Sridharan",
+  "background": {
+    "scripts": ["assets/js/background.js"]
+
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://success.salesforce.com/*"],
+      "js": [
+        "assets/js/third-party/jquery.min.js",
+        "assets/js/third-party/dropzone.min.js",
+        "assets/js/third-party/jquery-ui.min.js",
+        "assets/js/contentscript.js"
+      ],
+      "css": [
+        "assets/css/third-party/dropzone.min.css",
+        "assets/css/third-party/jquery-ui.min.css",
+        "assets/css/style.css"
+      ],
+      "run_at":"document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "https://success.salesforce.com/*"
+  ]
+}
